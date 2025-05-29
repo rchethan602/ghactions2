@@ -48,5 +48,7 @@ jobs:
           name: dist-files
       - name: output contents
         run: ls
+      - name: outpu filename
+        run: ${{ needs.build.outputs.script-file }}
       - name: Deploy
         run: echo "Deploying..."
